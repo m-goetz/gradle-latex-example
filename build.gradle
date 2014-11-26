@@ -1,0 +1,18 @@
+buildscript {
+    repositories {
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'edu.hm.cs.goetz1.gradle.latex:gradle-latex:0.1-SNAPSHOT'
+    }
+}
+
+apply plugin: 'latex'
+
+latex {
+    mainFilename = 'mainfile'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
